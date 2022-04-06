@@ -1,6 +1,15 @@
 <!DOCTYPE html> <!--관용적 형식-->
 <html>
     <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0YE0YFL6Q4"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-0YE0YFL6Q4');
+        </script>
         <title>Sim Ju Yong's CV</title>
         <meta charset="utf-8">  <!--인코딩 방법-->
         <style>
@@ -11,12 +20,19 @@
             p{
                 color : rgb(8, 167, 199);
             }
+            /* 반응형 웹사이트 */
+            @media all and (max-width: 580px) { 
+                    #container{
+                        display:grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                    }
+                }
             li{
                 width: 33.33333%;
                 height: 80px;
     
                 display: inline-block;
-                float: left;
+                float: left; 
     
                 text-align: center;
     
@@ -47,7 +63,10 @@
             #descrip{
                 width: 10vw;
             }
-            
+            ol{
+                border-left: 10px solid pink;
+            }
+
         </style>
         <nav>
 
@@ -58,8 +77,9 @@
         <h1><a href = "index.html">Juyong Sim's CV</a></h1>
         <p>This page is <strong>explain <u>Juyong's Coding</u> skills.</strong></p>
         <br>
-
+        <p style="border-bottom : 10px solid rgb(129, 9, 153); margin-bottom: 10px;"></p>
         <h2>Skills</h2>
+        <div id="container">
         <ol>
             <li class="one"><a href = "1.HTML.html">html</a></li>
             <li class="two"><a href = "2.CSS.html">css</a></li>
@@ -68,32 +88,11 @@
             <li class="two"><a href = "5.Python.html">python</a></li>
             <li class="three"><a href = "6.Matlab.html">matlab</a></li>
         </ol>
-        
+        </div>
         <h2 id = "descrip"> description</h2>
         <img src="descriptimg.jpg" alt="descrip image" style="width:500px;height:600px;">
         <a href="http://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank" style="display:block;">HyperText Markup Language</a>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, accusamus.
-
-        <div id="disqus_thread"></div>
-        <script>
-            /**
-            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-            /*
-            var disqus_config = function () {
-            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            */
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://juyongsimcv.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <script id="dsq-count-scr" src="//juyongsimcv.disqus.com/count.js" async></script>
 
     </body>
 </html>
